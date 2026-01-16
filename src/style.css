@@ -10,4 +10,11 @@
 
 @theme {
   --font-din-arabic: "DIN Next LT Arabic", sans-serif;
+
+  --color-lightest-gray: #eeeeee;
+  --color-lighter-gray: #f8f8f8;
+  --color-light-gray: #a5a5a5;
+  --color-dark-gray: #666666;
+
+  --text-xs-1: 0.813rem;
 }
