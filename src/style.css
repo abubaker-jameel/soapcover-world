@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("/fonts/din-next-lt-arabic-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-din-arabic: "DIN Next LT Arabic", sans-serif;
+
+  --color-lightest-gray: #eeeeee;
+  --color-lighter-gray: #f8f8f8;
+  --color-light-gray: #a5a5a5;
+  --color-dark-gray: #666666;
+
+  --text-xs-1: 0.813rem;
+}
