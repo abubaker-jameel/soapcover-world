@@ -51,14 +51,41 @@
   }
 
   h1 {
+    font-family: var(--font-din-arabic-bold);
     font-size: var(--text-5xl);
     font-weight: var(--font-weight-bold);
     letter-spacing: 0em;
   }
+
   h2 {
+    font-family: var(--font-din-arabic-medium);
     font-size: var(--text-4xl);
     font-weight: var(--font-weight-medium);
     letter-spacing: 0em;
-    line-height: 1.388em;
+    line-height: 1.388;
+  }
+
+  h3 {
+    font-family: var(--font-din-arabic-medium);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0em;
+    line-height: 1.46;
+  }
+
+  h4 {
+    font-family: var(--font-din-arabic-medium);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-xl);
+    letter-spacing: 0em;
+    line-height: 1.5;
+  }
+
+  h5 {
+    font-family: var(--font-din-arabic-medium);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-lg);
+    letter-spacing: 0em;
+    line-height: 1.39;
   }
 }

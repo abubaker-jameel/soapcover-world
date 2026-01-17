@@ -9,6 +9,7 @@ import { ProductCart } from "./sections/productCart";
 import { Video } from "./sections/video";
 import { initVideo } from "./video-init";
 import { IngredientsList } from "./sections/ingredientsList";
+import { Blog } from "./sections/blog";
 
 document.querySelector("#app").innerHTML = `
    ${Header()}
@@ -21,6 +22,7 @@ document.querySelector("#app").innerHTML = `
     ${ProductCart()}
     ${IngredientsList()}
     ${Video()}
+    ${Blog()}
   </main>
 `;
 
