@@ -11,6 +11,8 @@ import { initVideo } from "./video-init";
 import { IngredientsList } from "./sections/ingredientsList";
 import { Blog } from "./sections/blog";
 import { Footer } from "./sections/footer";
+import { Testimonial } from "./sections/testimonial";
+import { initTestimonialSwiper } from "./init-testimonial-swiper";
 
 document.querySelector("#app").innerHTML = `
    ${Header()}
@@ -23,6 +25,7 @@ document.querySelector("#app").innerHTML = `
     ${ProductCart()}
     ${IngredientsList()}
     ${Video()}
+    ${Testimonial()}
     ${Blog()}
     ${Footer()}
   </main>
@@ -30,5 +33,6 @@ document.querySelector("#app").innerHTML = `
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeroSwiper();
+  initTestimonialSwiper();
   initVideo();
 });
