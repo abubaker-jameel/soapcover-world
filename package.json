@@ -14,6 +14,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "clsx": "^2.1.1",
+    "page": "^1.11.6",
     "swiper": "^12.0.3",
     "tailwind-merge": "^3.4.0",
     "tailwind-variants": "^3.2.2",
