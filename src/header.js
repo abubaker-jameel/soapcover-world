@@ -10,16 +10,16 @@ import { Input } from "./components/input";
 
 const mainNavData = [
   {
-    id: "main-nav-id-1",
-    firstText: "سلة المشتريات",
-    lastText: "1,200 رس",
-    icon: CartSvg,
-  },
-  {
     id: "main-nav-id-2",
     firstText: "مرحبا بك",
     lastText: "تسجيل دخول",
     icon: AccountSvg,
+  },
+  {
+    id: "main-nav-id-1",
+    firstText: "سلة المشتريات",
+    lastText: "1,200 رس",
+    icon: CartSvg,
   },
 ];
 
@@ -57,21 +57,24 @@ document.addEventListener("DOMContentLoaded", function () {
 export function Header() {
   const mainNavItems = mainNavData
     .map(
-      (item) => `
-        <li class="flex items-center gap-2">
-          <div class="h-10 w-10 p-2 rounded-full bg-lighter-gray flex items-center justify-center">
-            ${item.icon}
-          </div>
-          <div class="flex flex-col gap-[0.25em]">
-            <span class="text-sm font-normal -tracking-normal leading-none text-light-gray">
-              ${item.firstText}
-            </span>
-            <span class="text-sm font-normal -tracking-normal leading-none">
-              ${item.lastText}
-            </span>
-          </div>
-        </li>
-      `
+      (item, index) => `
+      <li class="flex items-center gap-2">
+        <div class="h-10 w-10 rounded-full bg-lighter-gray flex items-center justify-center">
+          ${item.icon}
+        </div>
+
+        <div class="flex flex-col gap-[0.25em] ${
+          index === 0 ? "hidden sm:flex" : ""
+        }">
+          <span class="text-sm font-normal -tracking-normal leading-none text-light-gray">
+            ${item.firstText}
+          </span>
+          <span class="text-sm font-normal -tracking-normal leading-none">
+            ${item.lastText}
+          </span>
+        </div>
+      </li>
+    `
     )
     .join("");
 
@@ -162,7 +165,7 @@ export function Header() {
     </div>
 
 
-   <ul class="flex items-center gap-8 order-2 md:order-3">
+   <ul class="flex items-center gap-2 sm:gap-8 order-2 md:order-3">
       ${mainNavItems}
     </ul>
     
@@ -170,9 +173,9 @@ export function Header() {
 
      <div class="md:flex-1 hidden md:block md:order-2">
     ${Input({
-    placeholder: "ابحث عما تريد",
-    icon: SearchSvg,
-  })}
+      placeholder: "ابحث عما تريد",
+      icon: SearchSvg,
+    })}
   </div>
 
 
@@ -182,9 +185,9 @@ export function Header() {
 
   <div class="w-full flex-1 md:hidden order-3 md:order-2">
     ${Input({
-    placeholder: "ابحث عما تريد",
-    icon: SearchSvg,
-  })}
+      placeholder: "ابحث عما تريد",
+      icon: SearchSvg,
+    })}
   </div>
 </div>
 

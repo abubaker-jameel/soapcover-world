@@ -7,7 +7,7 @@ import { Button } from "../components/button";
 
 export function ProductCart() {
   return `
-        <section class="container mx-auto pt-14 pb-4">
+        <section class="container mx-auto pt-14 pb-4 px-[1.375em]">
             <div class="bg-white border-2 border-yellow rounded-3xl p-4">
 
             <div class="flex flex-col gap-4 md:flex-row">

@@ -27,7 +27,7 @@ export function Testimonial() {
         <section class="container mx-auto py-6 md:py-7">
             <div class="flex flex-col gap-8">
 
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between px-[1.375em]">
                     <div>
                         <h3>آراء العملاء</h3>
                         <p class="text-base tracking-normal font-normal leading-[1.5625] text-dark-gray">بيتم استعراض بعض آراء وتعليقات المستخدمين</p>
@@ -47,9 +47,9 @@ export function Testimonial() {
             <div class="swiper testimonial-swiper w-full">
                 <div class="swiper-wrapper">
                     ${reviews
-      .map(
-        (review) => `
-                    <div class="w-auto swiper-slide bg-white p-6 flex flex-col gap-4 rounded-sm">
+                      .map(
+                        (review) => `
+                    <div class="swiper-slide bg-white p-6 flex flex-col gap-4 rounded-sm h-full">
                         <div class="flex items-center justify-between">
                         <span class="inline-block h-3.25">${review.Ratings}</span>
                         <span class="inline-block h-[1.728em] w-8">${LeftQuotes}</span>
@@ -59,8 +59,8 @@ export function Testimonial() {
                         </p>
                     </div>
                     `
-      )
-      .join("")}
+                      )
+                      .join("")}
                 </div>
             </div>
 

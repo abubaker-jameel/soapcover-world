@@ -100,7 +100,7 @@ export function Footer() {
   return `
     <footer class="bg-white">
             <!-- Newsletter -->
-        <section class="footer-newsletter container mx-auto py-9 px-4 md:px-0">
+        <section class="footer-newsletter container mx-auto py-9 px-[1.375em]">
             <!-- subscription form -->
 
             <div class="flex flex-col md:flex-row gap-6">
@@ -130,7 +130,7 @@ export function Footer() {
         </section>
 
 
-          <section class="footer-map relative py-6 overflow-hidden">
+          <section class="footer-map relative py-6 overflow-hidden px-[1.375em]">
             <!-- Map background -->
             <div class="absolute inset-0 z-0">
               <iframe
@@ -150,8 +150,8 @@ export function Footer() {
                 <h5 class="text-center text-white">تابعنا على</h5>
                 <div class="flex items-center gap-2">
                   ${socialIcons
-      .map(
-        ({ name, icon, href }) => `
+                    .map(
+                      ({ name, icon, href }) => `
                         <a
                           href="${href}"
                           class="h-10 w-10 flex items-center justify-center"
@@ -160,15 +160,15 @@ export function Footer() {
                           ${icon}
                         </a>
                       `
-      )
-      .join("")}
+                    )
+                    .join("")}
                 </div>
               </div>
 
               <div class="flex flex-col md:flex-row items-center max-w-[59em] w-full">
                 ${contactItems
-      .map(
-        ({ label, value, href, icons }) => `
+                  .map(
+                    ({ label, value, href, icons }) => `
                       <div class="flex items-center w-full justify-center">
                         <a
                           href="${href}"
@@ -178,17 +178,18 @@ export function Footer() {
                         >
                       <div class="flex items-center gap-2 pt-2">
                       ${icons
-            .map(
-              (icon, index) => `
-                            <span class="${index === 1
-                  ? "inline-block h-[0.45em] w-2 text-white"
-                  : "inline-block"
-                }">
+                        .map(
+                          (icon, index) => `
+                            <span class="${
+                              index === 1
+                                ? "inline-block h-[0.45em] w-2 text-white"
+                                : "inline-block"
+                            }">
                               ${icon}
                             </span>
                           `
-            )
-            .join("")}
+                        )
+                        .join("")}
                     </div>
 
                           <div class="flex flex-col text-white">
@@ -198,8 +199,8 @@ export function Footer() {
                         </a>
                       </div>
                     `
-      )
-      .join("")}
+                  )
+                  .join("")}
               </div>
             </div>
           </section>
@@ -207,9 +208,9 @@ export function Footer() {
 
 
             <!-- main footer -->  
-            <section class="container mx-auto my-12">
+            <section class="container mx-auto my-12 px-[1.375em]">
 
-                <div class="grid grid-cols-1 lg:grid-cols-[24.0625em_repeat(4,1fr)] gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-[24.0625em_repeat(4,1fr)] gap-6">
                     <!-- about -->  
                     <div class="flex flex-col gap-4">
                         <h5>عن متجرنا</h5>
@@ -226,8 +227,8 @@ export function Footer() {
                         <h5>حسابى</h5>
                         <div class="flex flex-col gap-2">
                         ${accountLinks
-      .map(
-        ({ label, href }) => `
+                          .map(
+                            ({ label, href }) => `
                                 <div class="flex items-center">
                                     <a
                                     href="${href}"
@@ -248,8 +249,8 @@ export function Footer() {
                                     </a>
                                 </div>
                                 `
-      )
-      .join("")}
+                          )
+                          .join("")}
                         </div>
                     </div>
                     
@@ -258,8 +259,8 @@ export function Footer() {
                         <h5>روابط مهمة</h5>
                         <div class="flex flex-col gap-2">
                         ${importantLinks
-      .map(
-        ({ label, href }) => `
+                          .map(
+                            ({ label, href }) => `
                                 <div class="flex items-center">
                                     <a
                                     href="${href}"
@@ -280,8 +281,8 @@ export function Footer() {
                                     </a>
                                 </div>
                                 `
-      )
-      .join("")}
+                          )
+                          .join("")}
                         </div>
                     </div>
 
@@ -290,8 +291,8 @@ export function Footer() {
                         <h5>تواصل معنا</h5>
                         <div class="flex flex-col gap-2">
                             ${contactItemsWithNoIcons
-      .map(
-        ({ label, value, href }) => `
+                              .map(
+                                ({ label, value, href }) => `
                                 <div class="flex items-center">
                                     <a
                                     href="${href}"
@@ -316,8 +317,8 @@ export function Footer() {
                                     </a>
                                 </div>
                                 `
-      )
-      .join("")}
+                              )
+                              .join("")}
                         </div>
                     </div>
 

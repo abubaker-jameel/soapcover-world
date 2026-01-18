@@ -3,14 +3,21 @@ import DollarSignThin from "../assets/dollar-sign-thin.svg?raw";
 
 export function Comparision() {
   return `
-        <section class="container mx-auto py-4">
+        <section class="container mx-auto py-4 px-[1.375em]">
             <div class="bg-white p-6 rounded-3xl flex flex-col gap-6 md:flex-row">
 
-                <div class="flex flex-col justify-between w-full md:basis-1/2">
+                <div class="flex flex-col justify-between gap-6 md:gap-[unset] w-full md:basis-1/2">
                     <div class="flex flex-col gap-4">
                         <span class="text-base tracking-normal font-normal leading-[1.5625] text-yellow">قارن</span>
                         <div class="flex flex-col gap-2">
-                            <h2 >صابونة SoapCover</h2>
+                            <h2
+                            class="
+                                font-din-arabic-bold font-bold text-lg leading-none tracking-normal
+                                md:text-4xl md:leading-[1.388] md:tracking-normal md:font-medium md:font-din-arabic-medium
+                            "
+                            >
+                            صابونة SoapCover
+                            </h2>
                             <p class="text-base tracking-normal font-normal leading-[1.5625] text-dark-gray">مصنوعة من مكونات عضوية 100% وخالية من المواد الكيميائية، تم تطويرها لتقليل الشيب واستعادة اللون الطبيعي للشعر بشكل تدريجي وآمن للاستخدام اليومي.</p>
                         </div>
                     </div>

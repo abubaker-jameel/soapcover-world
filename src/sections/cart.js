@@ -117,7 +117,7 @@ export function Cart() {
               </label>
               <div class="flex items-center border border-lightest-gray rounded w-full px-2 flex-row-reverse">
                 <span class="inline-block h-6 w-6 p-[0.2em] -rotate-90 text-[#6F7380]">${RoughChevronIcon}</span>
-                <select id="countrySelect" class="flex-1 border-none outline-none pl-2 pr-2 py-[0.594em] text-sm font-normal leading-none tracking-normal text-light-gray text-right appearance-none bg-transparent">
+                <select id="countrySelect" class="flex-1 border-none outline-none pl-2 pr-2 py-[0.8em] text-sm font-normal leading-none tracking-normal text-light-gray text-right appearance-none bg-transparent">
                   <option value="">العراق</option>
                   <option value="syria">سوريا</option>
                   <option value="lebanon">لبنان</option>

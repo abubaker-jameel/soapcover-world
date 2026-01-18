@@ -4,7 +4,7 @@ import PlaySvg from "../assets/play.svg?raw";
 
 export function Video() {
   return `
-    <section class="container mx-auto py-6 md:py-7">
+    <section class="container mx-auto py-6 md:py-7 px-[1.375em]">
       <div class="relative w-full cursor-pointer group rounded-3xl overflow-hidden video-container h-[10.5em] md:h-[31.25em] sm:h-[14em]">
         <!-- Thumbnail -->
         <img 
@@ -15,10 +15,10 @@ export function Video() {
 
         <!-- Play button overlay -->
         <div class="absolute inset-0 flex items-center justify-center play-overlay">
-        <div class="w-[4.375em] h-[4.375em] md:w-20 md:h-20 bg-yellow rounded-full flex items-center justify-center
+        <div class="w-10 h-10 md:w-20 md:h-20 bg-yellow rounded-full flex items-center justify-center
                     transition-transform duration-300 group-hover:scale-110
-                    outline-[0.063em] outline-white outline-offset-[0.938em]">
-            <span class="inline-block w-5 h-6">
+                    outline-[0.063em] outline-white outline-offset-[0.6em] sm:outline-offset-[0.7em] md:outline-offset-[0.938em]">
+            <span class="inline-block w-3 sm:w-3.5 md:w-5 h-auto">
                 ${PlaySvg}
              </span>
         </div>

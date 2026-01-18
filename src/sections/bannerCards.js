@@ -17,7 +17,7 @@ const banners = [
 
 export function BannerCards() {
   return `
-    <section class="container mx-auto my-12">
+    <section class="container mx-auto my-12 px-[1.375em]">
       <div class="flex flex-col gap-6 sm:flex-row">
         ${banners
           .map(

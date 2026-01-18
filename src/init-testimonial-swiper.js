@@ -21,7 +21,7 @@ export function initTestimonialSwiper() {
 
     // Responsive
     breakpoints: {
-      0: { slidesPerView: 1 },
+      0: { slidesPerView: 1.43 },
       768: { slidesPerView: 2 },
       1024: { slidesPerView: 3 },
     },

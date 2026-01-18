@@ -13,7 +13,7 @@ export function Hero() {
 
           <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div class="relative bg-(image:--hero-banner-desktop) bg-cover bg-center bg-no-repeat min-h-[38.5em] flex justify-center flex-col">
+            <div class="relative bg-(image:--hero-banner-desktop) bg-cover bg-center bg-no-repeat min-h-dvh md:min-h-[38.5em] flex justify-center flex-col">
               <div class="absolute inset-0 bg-black/48"></div>
 
               <div class="relative z-10 flex flex-col items-center gap-8">

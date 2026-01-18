@@ -3,7 +3,7 @@ import OverlayBanner from "../assets/banner-small-overlay-image-desktop.png";
 
 export function CTABanner() {
   return `
-        <section class="py-10 bg-(image:--small-banner-desktop) bg-cover bg-center bg-no-repeat">
+        <section class="py-10 px-[1.375em] bg-(image:--small-banner-desktop) bg-cover bg-center bg-no-repeat">
         <div class="container mx-auto flex flex-col gap-12 lg:flex-row">
             
             <div class="flex flex-col items-center lg:items-start justify-between gap-8 lg:basis-[36.21%]">

@@ -123,3 +123,12 @@
   @apply w-9.25 h-3.5 bg-yellow-400 rounded-full;
   border: none; /* remove border */
 }
+
+.testimonial-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.testimonial-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}

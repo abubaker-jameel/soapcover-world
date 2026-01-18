@@ -51,7 +51,7 @@ function BlogCard({ title, description, image }) {
 // Main Blog section
 export function Blog() {
   return `
-    <section class="container mx-auto pb-6">
+    <section class="container mx-auto pb-6 px-[1.375em]">
       <div class="flex items-center justify-between mb-6">
         <div>
           <h4>أحدث المقالات</h4>
