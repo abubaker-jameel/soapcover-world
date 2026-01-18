@@ -50,8 +50,8 @@ export function Hero() {
 
         <!-- Navigation -->
 
-        <div class="swiper-button-prev absolute left-1/5 top-1/3 -translate-y-1/5 h-[3.75em] w-[3.75em] border border-white rounded-full">l</div>
-        <div class="swiper-button-next absolute right-1/5 top-1/3 -translate-y-1/5 h-[3.75em] w-[3.75em] border border-white rounded-full">r</div>
+        <div class="absolute left-1/5 top-1/3 -translate-y-1/5 h-[3.75em] w-[3.75em] border border-white rounded-full">l</div>
+        <div class="absolute right-1/5 top-1/3 -translate-y-1/5 h-[3.75em] w-[3.75em] border border-white rounded-full">r</div>
 
 
         <!-- Pagination -->
