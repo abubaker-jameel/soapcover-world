@@ -55,8 +55,8 @@ export function Hero() {
         </div>
 
         <!-- Navigation -->
-        <span class="swiper-button-prev-hero hidden absolute z-10 left-1/5 top-1/2 -translate-y-1/2 h-[3.75em] w-[3.75em] border border-white rounded-full p-5.5 md:flex items-center justify-center">${ChevronLeft}</span>
-        <span class="swiper-button-next-hero hidden absolute z-10 right-1/5 top-1/2 -translate-y-1/2 h-[3.75em] w-[3.75em] border border-white rounded-full p-5.5 md:flex items-center justify-center">${ChevronRight}</span>
+        <span class="swiper-button-prev-hero hidden absolute z-10 2xl:left-1/5 lg:left-1/10 top-1/2 -translate-y-1/2 h-[3.75em] w-[3.75em] border border-white rounded-full p-5.5 lg:flex items-center justify-center">${ChevronLeft}</span>
+        <span class="swiper-button-next-hero hidden absolute z-10 2xl:right-1/5 lg:right-1/10 top-1/2 -translate-y-1/2 h-[3.75em] w-[3.75em] border border-white rounded-full p-5.5 lg:flex items-center justify-center">${ChevronRight}</span>
 
 
         <!-- Pagination -->

@@ -21,7 +21,7 @@ export function IngredientsList() {
   ];
 
   return `
-<section class="container mx-auto pt-4 pb-7">
+<section class="container mx-auto pt-4 pb-6 md:pb-7">
   <div class="flex flex-col md:flex-row rounded-3xl bg-white">
 
     <!-- Right Image -->
@@ -45,8 +45,8 @@ export function IngredientsList() {
 
       <ol class="list-none space-y-4 mt-6">
         ${ingredients
-          .map(
-            (item, idx) => `
+      .map(
+        (item, idx) => `
               <li class="relative font-din-arabic-medium text-2xl font-medium tracking-normal">
                 
                 <!-- Number -->
@@ -64,15 +64,14 @@ export function IngredientsList() {
                   </span>
                 </div>
 
-                ${
-                  idx !== ingredients.length - 1
-                    ? `<span class="block h-px bg-yellow my-6"></span>`
-                    : ""
-                }
+                ${idx !== ingredients.length - 1
+            ? `<span class="block h-px bg-yellow my-6"></span>`
+            : ""
+          }
               </li>
             `
-          )
-          .join("")}
+      )
+      .join("")}
       </ol>
 
     </div>

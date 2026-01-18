@@ -100,13 +100,13 @@ export function Footer() {
   return `
     <footer class="bg-white">
             <!-- Newsletter -->
-        <section class="footer-newsletter container mx-auto py-6">
+        <section class="footer-newsletter container mx-auto py-9 px-4 md:px-0">
             <!-- subscription form -->
 
-            <div class="flex gap-6">
+            <div class="flex flex-col md:flex-row gap-6">
 
                 <div class="flex items-center gap-4 basis-1/3">
-                    <div class="h-16 w-16">
+                    <div class="flex items-center justify-center h-14 w-14 md:h-16 md:w-16 shrink-0">
                         ${MessageSvg}
                     </div>
                     <div class="flex flex-col gap-1">
@@ -145,13 +145,13 @@ export function Footer() {
             </div>
 
             <!-- Content -->
-            <div class="relative z-10 flex flex-col justify-between items-center gap-[8.313em]">
+            <div class="relative z-10 flex flex-col justify-between items-center gap-5 md:gap-[8.313em]">
               <div class="flex flex-col items-center gap-4">
                 <h5 class="text-center text-white">تابعنا على</h5>
                 <div class="flex items-center gap-2">
                   ${socialIcons
-                    .map(
-                      ({ name, icon, href }) => `
+      .map(
+        ({ name, icon, href }) => `
                         <a
                           href="${href}"
                           class="h-10 w-10 flex items-center justify-center"
@@ -160,15 +160,15 @@ export function Footer() {
                           ${icon}
                         </a>
                       `
-                    )
-                    .join("")}
+      )
+      .join("")}
                 </div>
               </div>
 
-              <div class="flex items-center max-w-[59em] w-full">
+              <div class="flex flex-col md:flex-row items-center max-w-[59em] w-full">
                 ${contactItems
-                  .map(
-                    ({ label, value, href, icons }) => `
+      .map(
+        ({ label, value, href, icons }) => `
                       <div class="flex items-center w-full justify-center">
                         <a
                           href="${href}"
@@ -178,18 +178,17 @@ export function Footer() {
                         >
                       <div class="flex items-center gap-2 pt-2">
                       ${icons
-                        .map(
-                          (icon, index) => `
-                            <span class="${
-                              index === 1
-                                ? "inline-block h-[0.45em] w-2 text-white"
-                                : "inline-block"
-                            }">
+            .map(
+              (icon, index) => `
+                            <span class="${index === 1
+                  ? "inline-block h-[0.45em] w-2 text-white"
+                  : "inline-block"
+                }">
                               ${icon}
                             </span>
                           `
-                        )
-                        .join("")}
+            )
+            .join("")}
                     </div>
 
                           <div class="flex flex-col text-white">
@@ -199,8 +198,8 @@ export function Footer() {
                         </a>
                       </div>
                     `
-                  )
-                  .join("")}
+      )
+      .join("")}
               </div>
             </div>
           </section>
@@ -210,7 +209,7 @@ export function Footer() {
             <!-- main footer -->  
             <section class="container mx-auto my-12">
 
-                <div class="grid grid-cols-[24.0625em_repeat(4,1fr)] gap-6">
+                <div class="grid grid-cols-1 lg:grid-cols-[24.0625em_repeat(4,1fr)] gap-6">
                     <!-- about -->  
                     <div class="flex flex-col gap-4">
                         <h5>عن متجرنا</h5>
@@ -227,8 +226,8 @@ export function Footer() {
                         <h5>حسابى</h5>
                         <div class="flex flex-col gap-2">
                         ${accountLinks
-                          .map(
-                            ({ label, href }) => `
+      .map(
+        ({ label, href }) => `
                                 <div class="flex items-center">
                                     <a
                                     href="${href}"
@@ -249,8 +248,8 @@ export function Footer() {
                                     </a>
                                 </div>
                                 `
-                          )
-                          .join("")}
+      )
+      .join("")}
                         </div>
                     </div>
                     
@@ -259,8 +258,8 @@ export function Footer() {
                         <h5>روابط مهمة</h5>
                         <div class="flex flex-col gap-2">
                         ${importantLinks
-                          .map(
-                            ({ label, href }) => `
+      .map(
+        ({ label, href }) => `
                                 <div class="flex items-center">
                                     <a
                                     href="${href}"
@@ -281,8 +280,8 @@ export function Footer() {
                                     </a>
                                 </div>
                                 `
-                          )
-                          .join("")}
+      )
+      .join("")}
                         </div>
                     </div>
 
@@ -291,8 +290,8 @@ export function Footer() {
                         <h5>تواصل معنا</h5>
                         <div class="flex flex-col gap-2">
                             ${contactItemsWithNoIcons
-                              .map(
-                                ({ label, value, href }) => `
+      .map(
+        ({ label, value, href }) => `
                                 <div class="flex items-center">
                                     <a
                                     href="${href}"
@@ -317,8 +316,8 @@ export function Footer() {
                                     </a>
                                 </div>
                                 `
-                              )
-                              .join("")}
+      )
+      .join("")}
                         </div>
                     </div>
 
@@ -346,25 +345,22 @@ export function Footer() {
             </section>
 
             <!-- footer bottom -->  
-            <section class="bg-black py-4">
-                <div class="container mx-auto flex items-center justify-between"> 
-                    <span dir="ltr" class="font-din-arabic text-sm leading-none tracking-normal font-normal text-white">© ${new Date().getFullYear()} SoapCover | جميع الحقوق محفوظة</span>
-                    <div class="text-white flex items-center gap-2">
-                      <span class="inline-block bg-red-500 h-7.75 w-15">
-                         <!-- svg here -->  
-                      </span>
-                      <span class="inline-block bg-red-500 h-7.75 w-15">
-                         <!-- svg here -->  
-                      </span>
-                      <span class="inline-block bg-red-500 h-7.75 w-15">
-                         <!-- svg here -->  
-                      </span>
-                      <span class="inline-block bg-red-500 h-7.75 w-15">
-                         <!-- svg here -->  
-                      </span>
-                    </div>
-                </div>
-            </section>
+           <section class="bg-black py-4">
+  <div class="container mx-auto flex flex-col items-center justify-center gap-2 md:flex-row-reverse md:justify-between md:items-center">
+  <!-- Icons -->
+    <div class="text-white flex items-center gap-2 mb-2 md:mb-0">
+      <span class="inline-block bg-red-500 h-7.75 w-15"></span>
+      <span class="inline-block bg-red-500 h-7.75 w-15"></span>
+      <span class="inline-block bg-red-500 h-7.75 w-15"></span>
+      <span class="inline-block bg-red-500 h-7.75 w-15"></span>
+    </div>
+
+    <!-- footer text -->
+    <span dir="rtl" class="font-din-arabic text-sm leading-none tracking-normal font-normal text-white text-center md:text-right">
+      © ${new Date().getFullYear()} SoapCover | جميع الحقوق محفوظة
+    </span>
+  </div>
+</section>
     </footer>
   `;
 }

@@ -31,7 +31,7 @@ const blogs = [
 // Blog card component
 function BlogCard({ title, description, image }) {
   return `
-    <div class="flex flex-col gap-4 align-top justify-between pt-7 pb-14">
+    <div class="flex flex-col gap-4 align-top justify-between md:pt-7 md:pb-14">
         <div class="relative w-full pt-[16.125em] rounded-sm">
             <img src="${image}" alt="blog-image" class="absolute top-0 left-0 w-full h-full object-cover rounded-[inherit]">
         </div>
@@ -51,7 +51,7 @@ function BlogCard({ title, description, image }) {
 // Main Blog section
 export function Blog() {
   return `
-    <section class="container mx-auto">
+    <section class="container mx-auto pb-6">
       <div class="flex items-center justify-between mb-6">
         <div>
           <h4>أحدث المقالات</h4>
