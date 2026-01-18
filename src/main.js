@@ -1,4 +1,6 @@
 import "./style.css";
+import page from "page";
+
 import { Header } from "./header";
 import { Hero } from "./sections/hero";
 import { initHeroSwiper } from "./swiper-hero-init";
@@ -15,28 +17,69 @@ import { Testimonial } from "./sections/testimonial";
 import { initTestimonialSwiper } from "./init-testimonial-swiper";
 import { Features } from "./sections/features";
 import { Comparision } from "./sections/comparison";
+import { Cart } from "./sections/cart";
 
-document.querySelector("#app").innerHTML = `
-   ${Header()}
+// ---------- Route functions ----------
 
-  <main class="font-din-arabic">
-    ${Hero()}
-    ${BannerCards()}
-    ${ProductImage()}
-    ${CTABanner()}
-    ${ProductCart()}
-    ${Features()}
-    ${Comparision()}
-    ${IngredientsList()}
-    ${Video()}
-    ${Testimonial()}
-    ${Blog()}
-    ${Footer()}
-  </main>
-`;
+// Home Page (all components)
+function HomePage() {
+  document.querySelector("#app").innerHTML = `
+    ${Header()}
+    <main class="font-din-arabic">
+      ${Hero()}
+      ${BannerCards()}
+      ${ProductImage()}
+      ${CTABanner()}
+      ${ProductCart()}
+      ${Features()}
+      ${Comparision()}
+      ${IngredientsList()}
+      ${Video()}
+      ${Testimonial()}
+      ${Blog()}
+      ${Footer()}
+    </main>
+  `;
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Initialize any JS needed for sections
   initHeroSwiper();
   initTestimonialSwiper();
   initVideo();
+}
+
+// Cart Page (just cart section, can add Header/Footer too if needed)
+function CartPage() {
+  document.querySelector("#app").innerHTML = `
+    ${Header()}
+    <main class="font-din-arabic">
+        ${Cart()}
+    </main>
+    ${Footer()}
+  `;
+}
+
+// 404 Page
+function NotFoundPage() {
+  document.querySelector("#app").innerHTML = `
+    ${Header()}
+    <main class="font-din-arabic">
+      <h1>404 - Page Not Found</h1>
+      <p>The page you are looking for does not exist.</p>
+    </main>
+    ${Footer()}
+  `;
+}
+
+// ---------- Routes ----------
+page("/", HomePage);
+page("/cart", CartPage);
+page("*", NotFoundPage);
+page();
+
+// Handle SPA navigation on anchor click
+document.addEventListener("click", (e) => {
+  if (e.target.matches("a[data-link]")) {
+    e.preventDefault();
+    page.show(e.target.getAttribute("href"));
+  }
 });
