@@ -17,14 +17,15 @@ const banners = [
 
 export function BannerCards() {
   return `
-        <section class="container mx-auto my-12">
-            <div class="flex gap-6">
-                ${banners
-                  .map(
-                    (b) => `<div class="w-1/2">${BannerCardComponent(b)}</div>`
-                  )
-                  .join("")}
-            </div>
-        </section>
+    <section class="container mx-auto my-12">
+      <div class="flex flex-col gap-6 sm:flex-row">
+        ${banners
+          .map(
+            (b) =>
+              `<div class="w-full sm:w-1/2">${BannerCardComponent(b)}</div>`
+          )
+          .join("")}
+      </div>
+    </section>
     `;
 }

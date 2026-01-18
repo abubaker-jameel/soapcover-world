@@ -17,11 +17,11 @@ export function Hero() {
               <div class="absolute inset-0 bg-black/48"></div>
 
               <div class="relative z-10 flex flex-col items-center gap-8">
-                <h1 class="font-din-arabic-bold text-5xl text-center">
+                <h1 class="md:font-din-arabic-bold md:text-5xl text-center font-din-arabic-medium text-4xl font-medium md:font-bold leading-[1.39]">
                   صابونة عضوية لإزالة الشيب
                 </h1>
 
-                <p class="text-base text-center max-w-[40.875em]">
+                <p class="md:text-base md:leading-[1.5625] text-sm leading-none text-center max-w-[40.875em]">
                   ودّع صبغات الشعر الكيميائية القاسية، ورحّب بـ SoapCover الحل
                   الطبيعي الخالي من الصبغات الذي يساعد على تجديد لون شعرك.
                 </p>
@@ -55,8 +55,8 @@ export function Hero() {
         </div>
 
         <!-- Navigation -->
-        <span class="swiper-button-prev-hero absolute z-10 left-1/5 top-1/2 -translate-y-1/2 h-[3.75em] w-[3.75em] border border-white rounded-full p-5.5 flex items-center justify-center">${ChevronLeft}</span>
-        <span class="swiper-button-next-hero absolute z-10 right-1/5 top-1/2 -translate-y-1/2 h-[3.75em] w-[3.75em] border border-white rounded-full p-5.5 flex items-center justify-center">${ChevronRight}</span>
+        <span class="swiper-button-prev-hero hidden absolute z-10 left-1/5 top-1/2 -translate-y-1/2 h-[3.75em] w-[3.75em] border border-white rounded-full p-5.5 md:flex items-center justify-center">${ChevronLeft}</span>
+        <span class="swiper-button-next-hero hidden absolute z-10 right-1/5 top-1/2 -translate-y-1/2 h-[3.75em] w-[3.75em] border border-white rounded-full p-5.5 md:flex items-center justify-center">${ChevronRight}</span>
 
 
         <!-- Pagination -->
