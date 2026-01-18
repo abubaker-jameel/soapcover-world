@@ -2,6 +2,7 @@ import { Button } from "../components/button";
 import BlogImage1 from "../assets/blog-1.png";
 import BlogImage2 from "../assets/blog-2.png";
 import BlogImage3 from "../assets/blog-3.png";
+import ChevronLeft from "../assets/chevron-left.svg?raw";
 
 // Array of blog data
 const blogs = [
@@ -30,7 +31,7 @@ const blogs = [
 // Blog card component
 function BlogCard({ title, description, image }) {
   return `
-    <div class="flex flex-col gap-4 align-top justify-between">
+    <div class="flex flex-col gap-4 align-top justify-between pt-7 pb-14">
         <div class="relative w-full pt-[16.125em] rounded-sm">
             <img src="${image}" alt="blog-image" class="absolute top-0 left-0 w-full h-full object-cover rounded-[inherit]">
         </div>
@@ -58,7 +59,7 @@ export function Blog() {
             تسوق احدث المنتجات المميزة المضافة جديد
           </p>
         </div>
-        ${Button()}
+        ${Button({ variant: "outline", size: "icon", rightIcon: ChevronLeft, rightIconClassName: "h-4 w-4 py-1 mr-2 text-[#0B0A0A]" })}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

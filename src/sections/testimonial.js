@@ -24,7 +24,7 @@ const reviews = [
 
 export function Testimonial() {
   return `
-        <section class="container mx-auto">
+        <section class="container mx-auto py-7">
             <div class="flex flex-col gap-8">
 
                 <div class="flex items-center justify-between">
@@ -34,10 +34,10 @@ export function Testimonial() {
                     </div>
 
                     <div class="flex items-center justify-between gap-2 relative">
-                        <span class="swiper-button-prev inline-block h-[2.875em] w-[2.875em] bg-white p-3.75 rounded-full ring-1 ring-lightest-gray ">
+                        <span class="swiper-button-prev inline-block h-[2.875em]! w-[2.875em]! bg-white text-dark-gray! p-3.75 rounded-full ring-1 ring-lightest-gray ">
                             ${ChevronRight}
                         </span>
-                        <span class="swiper-button-next inline-block h-[2.875em] w-[2.875em] bg-white p-3.75 rounded-full ring-1 ring-lightest-gray">
+                        <span class="swiper-button-next inline-block h-[2.875em]! w-[2.875em]! bg-white text-dark-gray! p-3.75 rounded-full ring-1 ring-lightest-gray">
                             ${ChevronLeft}
                         </span>
                     </div>

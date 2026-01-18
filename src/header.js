@@ -24,19 +24,19 @@ const mainNavData = [
 ];
 
 const navData = [
+  { id: "nav-item-4", name: "العربية - رس" },
   {
-    id: "nav-item-1",
-    name: "تواصل معنا",
+    id: "nav-item-3",
+    name: "المفضلة",
   },
   {
     id: "nav-item-2",
     name: "سياسة الإستبدال أو الاسترجاع",
   },
   {
-    id: "nav-item-3",
-    name: "المفضلة",
+    id: "nav-item-1",
+    name: "تواصل معنا",
   },
-  { id: "nav-item-4", name: "العربية - رس" },
 ];
 
 export function Header() {
@@ -44,6 +44,9 @@ export function Header() {
     .map(
       (item) => `
         <li class="flex items-center gap-2">
+          <div class="h-10 w-10 p-2 rounded-full bg-lighter-gray flex items-center justify-center">
+            ${item.icon}
+          </div>
           <div class="flex flex-col gap-[0.25em]">
             <span class="text-sm font-normal -tracking-normal leading-none text-light-gray">
               ${item.firstText}
@@ -51,9 +54,6 @@ export function Header() {
             <span class="text-sm font-normal -tracking-normal leading-none">
               ${item.lastText}
             </span>
-          </div>
-          <div class="h-10 w-10 p-2 rounded-full bg-lighter-gray flex items-center justify-center">
-            ${item.icon}
           </div>
         </li>
       `
@@ -78,27 +78,23 @@ export function Header() {
     .join("");
 
   return `
-    <header class="font-din-arabic">
+    <header class="font-din-arabic bg-white">
 
         <!-- top header -->
 
     <div class="bg-lighter-gray">   
      <div class="container mx-auto flex items-center justify-between py-2">
-        <div class="">
-            <nav>
-                <ul class="flex items-center">
-                   ${navItems}
-                </ul>
-            </nav>
-        </div>
 
 
     <div>
-    <ul class="flex items-center">
+      <ul class="flex items-center" dir="ltr">
+
         <!-- Email -->
         <li class="flex items-center gap-2 font-normal text-xs-1 leading-none -tracking-normal text-dark-gray">
-        <span>info@sapcover.com</span>
-        <span class="inline-block h-4 w-4">${MailSvg}</span>
+          <a href="mailto:info@sapcover.com" class="flex items-center gap-2">
+            <span>info@sapcover.com</span>
+            <span class="inline-block h-4 w-4">${MailSvg}</span>
+          </a>
         </li>
 
         <!-- Separator -->
@@ -106,11 +102,23 @@ export function Header() {
 
         <!-- Phone -->
         <li class="flex items-center gap-2 font-normal text-xs-1 leading-none -tracking-normal text-dark-gray">
-        <span>+971 50 796 7166</span>
-        <span class="inline-block h-4 w-4">${CallSvg}</span>
+          <a href="tel:+971507967166" class="flex items-center gap-2">
+            <span>+971 50 796 7166</span>
+            <span class="inline-block h-4 w-4">${CallSvg}</span>
+          </a>
         </li>
-    </ul>
+
+      </ul>
     </div>
+
+
+      <div class="">
+            <nav>
+                <ul class="flex items-center">
+                   ${navItems}
+                </ul>
+            </nav>
+      </div>
 
     </div>
     </div>
@@ -118,10 +126,9 @@ export function Header() {
         <!-- bottom header -->
 
     <div class="flex items-center justify-between gap-12 py-8 container mx-auto">
-        <div>
-            <ul class="flex items-center gap-8">
-                    ${mainNavItems}
-            </ul>
+
+        <div class="h-12 w-[4.938em]">
+                ${Logo}
         </div>
 
 
@@ -132,10 +139,12 @@ export function Header() {
             })}
         </div>
 
-
         <div>
-                ${Logo}
+            <ul class="flex items-center gap-8">
+                    ${mainNavItems}
+            </ul>
         </div>
+
      </div>
     </header>
   `;

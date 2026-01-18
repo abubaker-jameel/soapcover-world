@@ -117,8 +117,10 @@ export function Footer() {
                 
                 <div class="flex flex-col gap-4 basis-2/3">
                     <h6>يمكنك إلغاء الاشتراك في أي لحظة</h6>
-                    <div class="flex gap-2">
-                        ${Input({ placeholder: "ادخل البريد الالكترونى", className: "flex-1" })}
+                    <div class="flex gap-2 items-center">
+                        <div class="flex-1">
+                        ${Input({ placeholder: "ادخل البريد الالكترونى" })}
+                         </div>
                         ${Button()}
                     </div>
                 </div>
@@ -128,67 +130,81 @@ export function Footer() {
         </section>
 
 
-         <section class="footer-map bg-amber-900 py-6">
-            <!-- google map / iframe -->
-            <div class="flex flex-col justify-between items-center gap-[8.313em]">
-                <div class="flex flex-col items-center gap-4">
-                    <h5 class="text-center text-white">تابعنا على</h5>
-                    <div class="flex items-center justify-between gap-2">
-                        ${socialIcons
-                          .map(
-                            ({ name, icon, href }) => `
-                                <a
-                                href="${href}"
-                                class="h-10 w-10 flex items-center justify-center"
-                                aria-label="${name}"
-                                >
-                                ${icon}
-                                </a>
-                            `
-                          )
-                          .join("")}
-                    </div>
+          <section class="footer-map relative py-6 overflow-hidden">
+            <!-- Map background -->
+            <div class="absolute inset-0 z-0">
+              <iframe
+                src="https://www.google.com/maps?q=Mecca&output=embed"
+                class="w-full h-full pointer-events-none"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+
+              <!-- Overlay -->
+              <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 flex flex-col justify-between items-center gap-[8.313em]">
+              <div class="flex flex-col items-center gap-4">
+                <h5 class="text-center text-white">تابعنا على</h5>
+                <div class="flex items-center gap-2">
+                  ${socialIcons
+                    .map(
+                      ({ name, icon, href }) => `
+                        <a
+                          href="${href}"
+                          class="h-10 w-10 flex items-center justify-center"
+                          aria-label="${name}"
+                        >
+                          ${icon}
+                        </a>
+                      `
+                    )
+                    .join("")}
                 </div>
+              </div>
 
-                <div class="flex items-center max-w-[59em] w-full">
-                    ${contactItems
-                      .map(
-                        ({ label, value, href, icons }) => `
-                         <div class="flex items-center w-full justify-center">
-                            <a
-                            href="${href}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="flex items-start gap-1"
-                            >
-                            <div class="flex items-center gap-2 pt-2">
-                                ${icons
-                                  .map(
-                                    (icon) => `
-                                    <span class="inline-block">
-                                        ${icon}
-                                    </span>
-                                    `
-                                  )
-                                  .join("")}
-                            </div>
+              <div class="flex items-center max-w-[59em] w-full">
+                ${contactItems
+                  .map(
+                    ({ label, value, href, icons }) => `
+                      <div class="flex items-center w-full justify-center">
+                        <a
+                          href="${href}"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="flex items-start gap-1"
+                        >
+                      <div class="flex items-center gap-2 pt-2">
+                      ${icons
+                        .map(
+                          (icon, index) => `
+                            <span class="${
+                              index === 1
+                                ? "inline-block h-[0.45em] w-2 text-white"
+                                : "inline-block"
+                            }">
+                              ${icon}
+                            </span>
+                          `
+                        )
+                        .join("")}
+                    </div>
 
-                            <div class="flex flex-col text-white">
-                                <span class="text-base tracking-normal font-normal leading-[1.5625]">
-                                ${label}
-                                </span>
-                                <span class="text-base tracking-normal font-normal leading-[1.5625]">
-                                ${value}
-                                </span>
-                            </div>
-                            </a>
+                          <div class="flex flex-col text-white">
+                            <span>${label}</span>
+                            <span>${value}</span>
                           </div>
-                        `
-                      )
-                      .join("")}
-                  </div>
-               </div>
-            </section>
+                        </a>
+                      </div>
+                    `
+                  )
+                  .join("")}
+              </div>
+            </div>
+          </section>
+
 
 
             <!-- main footer -->  
@@ -222,7 +238,7 @@ export function Footer() {
                                     >
 
                                     <!-- Arrow icon always at the end -->
-                                    <span class="inline-block">
+                                    <span class="inline-block h-[0.45em] w-2 mt-3">
                                         ${ArrowLeftSvg}
                                     </span>
                 
@@ -254,7 +270,7 @@ export function Footer() {
                                     >
 
                                     <!-- Arrow icon always at the end -->
-                                    <span class="inline-block">
+                                    <span class="inline-block h-[0.45em] w-2 mt-3">
                                         ${ArrowLeftSvg}
                                     </span>
                 
@@ -286,7 +302,7 @@ export function Footer() {
                                     >
 
                                     <!-- Arrow icon always at the end -->
-                                    <span class="inline-block">
+                                    <span class="inline-block h-[0.45em] w-2 mt-3">
                                         ${ArrowLeftSvg}
                                     </span>
 
@@ -310,21 +326,21 @@ export function Footer() {
                     <!-- social -->  
                     <div class="flex flex-col gap-4">
                         <h5>تابعنا على</h5>
-                        <div class="flex items-center justify-between gap-2">
-                            <span class="inline-block">
-                                ${SnapchatSvg}
+                        <div class="flex items-center gap-2">
+                            <span class="inline-block h-8.5 w-8.5 rounded-full border border-lightest-gray p-[0.531em]">
+                                ${ArrowLeftSvg}
                             </span>
-                            <span class="inline-block">
-                                ${SnapchatSvg}
+                            <span class="inline-block h-8.5 w-8.5 rounded-full border border-lightest-gray p-[0.531em]">
+                                ${ArrowLeftSvg}
+                            </span>
+                            <span class="inline-block h-8.5 w-8.5 rounded-full border border-lightest-gray p-[0.531em]">
+                                ${ArrowLeftSvg}
+                            </span>
+                            <span class="inline-block h-8.5 w-8.5 rounded-full border border-lightest-gray p-[0.531em]">
+                                ${ArrowLeftSvg}
                             </span>
                         </div>
                     </div>
-
-
-                    
-
-
-
                 </div>
                 
             </section>
@@ -333,7 +349,20 @@ export function Footer() {
             <section class="bg-black py-4">
                 <div class="container mx-auto flex items-center justify-between"> 
                     <span dir="ltr" class="font-din-arabic text-sm leading-none tracking-normal font-normal text-white">© ${new Date().getFullYear()} SoapCover | جميع الحقوق محفوظة</span>
-                    <div class="text-white">Images</div>
+                    <div class="text-white flex items-center gap-2">
+                      <span class="inline-block bg-red-500 h-7.75 w-15">
+                         <!-- svg here -->  
+                      </span>
+                      <span class="inline-block bg-red-500 h-7.75 w-15">
+                         <!-- svg here -->  
+                      </span>
+                      <span class="inline-block bg-red-500 h-7.75 w-15">
+                         <!-- svg here -->  
+                      </span>
+                      <span class="inline-block bg-red-500 h-7.75 w-15">
+                         <!-- svg here -->  
+                      </span>
+                    </div>
                 </div>
             </section>
     </footer>

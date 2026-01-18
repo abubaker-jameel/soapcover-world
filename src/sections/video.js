@@ -4,7 +4,7 @@ import PlaySvg from "../assets/play.svg?raw";
 
 export function Video() {
   return `
-    <section class="container mx-auto my-7">
+    <section class="container mx-auto py-7">
       <div class="relative w-full cursor-pointer group rounded-3xl overflow-hidden video-container h-[31.25em]">
         <!-- Thumbnail -->
         <img 
