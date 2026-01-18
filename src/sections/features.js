@@ -26,9 +26,9 @@ export function Features() {
       <div class="bg-white p-8 rounded-2xl">
       <div class="flex flex-col gap-6 md:flex-row md:items-center">
           ${features
-            .map(
-              (feature, index) => `
-            <div class="flex items-center gap-4">
+      .map(
+        (feature, index) => `
+            <div class="flex flex-col text-center md:text-start md:flex-row items-center gap-4">
               <span class="inline-block h-10 w-10">
                 ${feature.icon}
               </span>
@@ -39,15 +39,14 @@ export function Features() {
                 </p>
               </div>
             </div>
-            ${
-              index < features.length - 1
-                ? `<span class="h-px w-full bg-lightest-gray
+            ${index < features.length - 1
+            ? `<span class="h-px w-full bg-lightest-gray
                              md:w-px md:h-[4.375em]"></span>`
-                : ""
-            }
+            : ""
+          }
           `
-            )
-            .join("")}
+      )
+      .join("")}
         </div>
       </div>
     </section>

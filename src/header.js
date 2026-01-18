@@ -39,6 +39,21 @@ const navData = [
   },
 ];
 
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+  const closeBtn = document.getElementById("close-mobile-nav");
+
+  if (menuBtn && mobileNav && closeBtn) {
+    menuBtn.addEventListener("click", () => {
+      mobileNav.classList.remove("hidden");
+    });
+    closeBtn.addEventListener("click", () => {
+      mobileNav.classList.add("hidden");
+    });
+  }
+});
+
 export function Header() {
   const mainNavItems = mainNavData
     .map(
@@ -63,7 +78,7 @@ export function Header() {
   const navItems = navData
     .map((item, index) => {
       const li = `
-      <li id="${item.id}" class="font-normal text-xs-1 leading-none -tracking-normal text-dark-gray">
+      <li id="${item.id}" class="font-normal text-xs-1 leading-none -tracking-normal text-dark-gray hidden md:block">
         <a href="#" class="hover:underline">
           ${item.name}
         </a>
@@ -71,7 +86,7 @@ export function Header() {
     `;
       const separator =
         index !== navData.length - 1
-          ? `<span class="mx-4 h-2 w-[0.063em] bg-[#D6D6D6] inline-block"></span>`
+          ? `<span class="mx-4 h-2 w-[0.063em] bg-[#D6D6D6] hidden md:inline-block"></span>`
           : "";
       return li + separator;
     })
@@ -83,7 +98,7 @@ export function Header() {
         <!-- top header -->
 
     <div class="bg-lighter-gray">   
-     <div class="container mx-auto flex items-center justify-between py-2">
+     <div class="container mx-auto flex items-center justify-center md:justify-between py-2">
 
 
     <div>
@@ -125,27 +140,77 @@ export function Header() {
 
         <!-- bottom header -->
 
-    <div class="flex items-center justify-between gap-12 py-8 container mx-auto">
 
-        <div class="h-12 w-[4.938em]">
-                ${Logo}
-        </div>
+    <div class="container mx-auto flex flex-col md:flex-row items-center px-4 gap-5 md:gap-12 py-8 md:justify-between">
+
+  <div class="flex items-center gap-12 justify-between w-full order-1">
+    <div class="flex items-center gap-2">
+
+      <button class="block md:hidden p-2 text-[#FCBD02]" id="mobile-menu-btn" aria-label="Open menu">
+        <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+          <rect y="6" width="28" height="1" rx="1" fill="#E2B23A"/>
+          <rect y="13" width="28" height="1" rx="1" fill="#E2B23A"/>
+          <rect y="20" width="28" height="1" rx="1" fill="#E2B23A"/>
+        </svg>
+      </button>
+
+      <!-- Logo -->
+      <div class="h-12 w-[4.938em]">
+        ${Logo}
+      </div>
+
+    </div>
 
 
-        <div class="flex-1">
-            ${Input({
-              placeholder: "ابحث عما تريد",
-              icon: SearchSvg,
-            })}
-        </div>
+   <ul class="flex items-center gap-8 order-2 md:order-3">
+      ${mainNavItems}
+    </ul>
+    
+    <!-- Desktop Input -->
 
-        <div>
-            <ul class="flex items-center gap-8">
-                    ${mainNavItems}
-            </ul>
-        </div>
+     <div class="md:flex-1 hidden md:block md:order-2">
+    ${Input({
+    placeholder: "ابحث عما تريد",
+    icon: SearchSvg,
+  })}
+  </div>
 
-     </div>
+
+  </div>
+
+  <!-- Mobile Input -->
+
+  <div class="w-full flex-1 md:hidden order-3 md:order-2">
+    ${Input({
+    placeholder: "ابحث عما تريد",
+    icon: SearchSvg,
+  })}
+  </div>
+</div>
+
+
+
+
+    <!-- Mobile Navbar-->
+<nav id="mobile-nav" class="fixed inset-0 bg-white z-50 flex-col items-center justify-start pt-24 gap-6 transition-all duration-200 hidden flex md:hidden">
+  <button id="close-mobile-nav" class="absolute top-4 right-4 p-2">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="4" y1="4" x2="20" y2="20" stroke="#E2B23A"/>
+      <line x1="20" y1="4" x2="4" y2="20" stroke="#E2B23A"/>
+    </svg>
+  </button>
+  <ul class="flex flex-col items-center gap-6">
+    ${navData
+      .map(
+        (item) => `
+        <li class="font-normal text-lg text-dark-gray">
+          <a href="#">${item.name}</a>
+        </li>
+      `
+      )
+      .join("")}
+  </ul>
+</nav>
     </header>
   `;
 }

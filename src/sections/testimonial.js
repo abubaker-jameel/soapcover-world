@@ -24,7 +24,7 @@ const reviews = [
 
 export function Testimonial() {
   return `
-        <section class="container mx-auto py-7">
+        <section class="container mx-auto py-6 md:py-7">
             <div class="flex flex-col gap-8">
 
                 <div class="flex items-center justify-between">
@@ -47,8 +47,8 @@ export function Testimonial() {
             <div class="swiper testimonial-swiper w-full">
                 <div class="swiper-wrapper">
                     ${reviews
-                      .map(
-                        (review) => `
+      .map(
+        (review) => `
                     <div class="w-auto swiper-slide bg-white p-6 flex flex-col gap-4 rounded-sm">
                         <div class="flex items-center justify-between">
                         <span class="inline-block h-3.25">${review.Ratings}</span>
@@ -59,8 +59,8 @@ export function Testimonial() {
                         </p>
                     </div>
                     `
-                      )
-                      .join("")}
+      )
+      .join("")}
                 </div>
             </div>
 
