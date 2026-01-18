@@ -10,6 +10,7 @@ import { Video } from "./sections/video";
 import { initVideo } from "./video-init";
 import { IngredientsList } from "./sections/ingredientsList";
 import { Blog } from "./sections/blog";
+import { Footer } from "./sections/footer";
 
 document.querySelector("#app").innerHTML = `
    ${Header()}
@@ -23,6 +24,7 @@ document.querySelector("#app").innerHTML = `
     ${IngredientsList()}
     ${Video()}
     ${Blog()}
+    ${Footer()}
   </main>
 `;
 
