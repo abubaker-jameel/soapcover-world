@@ -88,4 +88,12 @@
     letter-spacing: 0em;
     line-height: 1.39;
   }
+
+  h6 {
+    font-family: var(--font-din-arabic);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--text-sm);
+    letter-spacing: 0em;
+    line-height: 1;
+  }
 }
