@@ -17,7 +17,7 @@ export function Input({
         placeholder="${placeholder}"
         value="${value}"
         dir="rtl"
-        class="w-full font-din-arabic text-right placeholder:text-light-gray text-light-gray text-[0.813rem] border border-[#EEEEEE] rounded px-4 py-3.5 ${
+        class="w-full font-din-arabic text-right bg-white placeholder:text-light-gray text-light-gray text-xs-1 border border-[#EEEEEE] rounded px-4 py-3.5 ${
           icon ? "pr-10" : ""
         } ${className}"
       />

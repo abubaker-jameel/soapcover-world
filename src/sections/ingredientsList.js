@@ -21,7 +21,7 @@ export function IngredientsList() {
   ];
 
   return `
-<section class="container mx-auto">
+<section class="container mx-auto pt-4 pb-7">
   <div class="flex rounded-3xl bg-white">
 
     <!-- Right Image -->

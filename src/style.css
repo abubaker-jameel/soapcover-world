@@ -35,7 +35,7 @@
   --color-dark-gray: #666666;
   --color-body-gray: #dfdfde;
   --color-yellow: #fcbd02;
-
+  --color-pink: #f55157;
   --text-xs-1: 0.813rem;
 
   --hero-banner-desktop: url("./assets/hero-banner-desktop.png");
@@ -110,4 +110,16 @@
   right: unset !important;
   cursor: pointer !important;
   margin: unset !important;
+}
+
+/* Default bullets */
+.custom-pagination .swiper-pagination-bullet {
+  @apply w-3.5 h-3.5 bg-transparent border border-gray-300 rounded-full mx-1;
+  transition: all 0.3s;
+}
+
+/* Active bullet */
+.custom-pagination .swiper-pagination-bullet-active {
+  @apply w-9.25 h-3.5 bg-yellow-400 rounded-full;
+  border: none; /* remove border */
 }

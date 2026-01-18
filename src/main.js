@@ -1,7 +1,7 @@
 import "./style.css";
 import { Header } from "./header";
 import { Hero } from "./sections/hero";
-import { initHeroSwiper } from "./swiper-init";
+import { initHeroSwiper } from "./swiper-hero-init";
 import { BannerCards } from "./sections/bannerCards";
 import { ProductImage } from "./sections/productImage";
 import { CTABanner } from "./sections/ctaBanner";
@@ -13,6 +13,8 @@ import { Blog } from "./sections/blog";
 import { Footer } from "./sections/footer";
 import { Testimonial } from "./sections/testimonial";
 import { initTestimonialSwiper } from "./init-testimonial-swiper";
+import { Features } from "./sections/features";
+import { Comparision } from "./sections/comparison";
 
 document.querySelector("#app").innerHTML = `
    ${Header()}
@@ -23,6 +25,8 @@ document.querySelector("#app").innerHTML = `
     ${ProductImage()}
     ${CTABanner()}
     ${ProductCart()}
+    ${Features()}
+    ${Comparision()}
     ${IngredientsList()}
     ${Video()}
     ${Testimonial()}
