@@ -97,3 +97,17 @@
     line-height: 1;
   }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: unset !important;
+  width: unset !important;
+  height: unset !important;
+  z-index: unset !important;
+  top: unset !important;
+  bottom: unset !important;
+  left: unset !important;
+  right: unset !important;
+  cursor: pointer !important;
+  margin: unset !important;
+}
