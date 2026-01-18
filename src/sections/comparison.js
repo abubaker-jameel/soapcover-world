@@ -4,9 +4,9 @@ import DollarSignThin from "../assets/dollar-sign-thin.svg?raw";
 export function Comparision() {
   return `
         <section class="container mx-auto py-4">
-            <div class="bg-white p-6 rounded-3xl flex">
+            <div class="bg-white p-6 rounded-3xl flex flex-col gap-6 md:flex-row">
 
-                <div class="flex flex-col justify-between basis-1/2">
+                <div class="flex flex-col justify-between w-full md:basis-1/2">
                     <div class="flex flex-col gap-4">
                         <span class="text-base tracking-normal font-normal leading-[1.5625] text-yellow">قارن</span>
                         <div class="flex flex-col gap-2">
@@ -18,7 +18,7 @@ export function Comparision() {
                     <a href="#" class="font-din-arabic-medium text-base tracking-normal font-medium leading-[1.5625] text-yellow underline">اكتشف المزيد</a>
                 </div>
 
-                <div class="flex flex-col gap-4 basis-1/2">
+               <div class="flex flex-col gap-4 w-full md:basis-1/2">
                     <div class="relative w-full pt-[20.5em] rounded-2xl">
                     <img
                         src=${ComparisonImage}

@@ -24,7 +24,7 @@ export function Features() {
   return `
     <section class="container mx-auto py-4">
       <div class="bg-white p-8 rounded-2xl">
-        <div class="flex items-center gap-6">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center">
           ${features
             .map(
               (feature, index) => `
@@ -41,7 +41,8 @@ export function Features() {
             </div>
             ${
               index < features.length - 1
-                ? `<span class="w-px h-[4.375em] bg-lightest-gray"></span>`
+                ? `<span class="h-px w-full bg-lightest-gray
+                             md:w-px md:h-[4.375em]"></span>`
                 : ""
             }
           `

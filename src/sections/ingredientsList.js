@@ -22,10 +22,10 @@ export function IngredientsList() {
 
   return `
 <section class="container mx-auto pt-4 pb-7">
-  <div class="flex rounded-3xl bg-white">
+  <div class="flex flex-col md:flex-row rounded-3xl bg-white">
 
     <!-- Right Image -->
-    <div class="flex-1/2 rounded-r-[inherit]">
+    <div class="w-full md:basis-1/2 rounded-t-[inherit] md:rounded-r-[inherit]">
       <img 
         src="${RightImage}" 
         alt="rightImage" 
@@ -34,7 +34,7 @@ export function IngredientsList() {
     </div>
 
     <!-- Content -->
-    <div class="flex-1/2 p-6 flex flex-col gap-6">
+    <div class="w-full md:basis-1/2 p-6 flex flex-col gap-6">
 
       <div class="flex flex-col gap-4">
         <span class="text-base tracking-normal text-yellow leading-[1.56]">أفضل المجموعات</span>
@@ -78,6 +78,5 @@ export function IngredientsList() {
     </div>
   </div>
 </section>
-
   `;
 }

@@ -10,34 +10,34 @@ export function ProductCart() {
         <section class="container mx-auto pt-14 pb-4">
             <div class="bg-white border-2 border-yellow rounded-3xl p-4">
 
-            <div class="flex gap-4">
+            <div class="flex flex-col gap-4 md:flex-row">
 
-<div class="basis-1/2 relative pt-[22.75em]">
-  <img src=${ProductImage} alt="product-image" class="absolute top-0 left-0 object-cover h-full w-full">
+            <div class="relative w-full pt-[22.75em] md:basis-1/2">
+            <img src=${ProductImage} alt="product-image" class="absolute top-0 left-0 object-cover h-full w-full">
 
-  <!-- Discount tag at top-left -->
-  <div class="absolute top-4 left-4 flex items-center">
-    <div class="relative flex items-center bg-[#FF5A5F] px-2 py-2 rounded-sm">
-      
-      <!-- RTL text inside tag -->
-      <span class="text-white text-sm leading-none tracking-normal font-normal flex flex-row-reverse gap-1" dir="rtl">
-            <span>25%</span>  
-            <span>خصم</span>
-      </span>
+            <!-- Discount tag at top-left -->
+            <div class="absolute top-4 left-4 flex items-center">
+                <div class="relative flex items-center bg-[#FF5A5F] px-2 py-2 rounded-sm">
+                
+                <!-- RTL text inside tag -->
+                <span class="text-white text-sm leading-none tracking-normal font-normal flex flex-row-reverse gap-1" dir="rtl">
+                        <span>25%</span>  
+                        <span>خصم</span>
+                </span>
 
-      <!-- Right rectangle / diamond -->
-      <div class="absolute -right-1 rotate-90 top-1/2 -translate-y-1/2">
-        <div class="w-3 h-2.25 rotate-45 bg-[#FF5A5F]"></div>
-      </div>
-      
-    </div>
-  </div>
-</div>
+                <!-- Right rectangle / diamond -->
+                <div class="absolute -right-1 rotate-90 top-1/2 -translate-y-1/2">
+                    <div class="w-3 h-2.25 rotate-45 bg-[#FF5A5F]"></div>
+                </div>
+                
+                </div>
+            </div>
+            </div>
 
 
             
                 
-            <div class="basis-1/2 flex flex-col justify-between">
+            <div class="w-full md:basis-1/2 flex flex-col justify-between">
               <div class="flex flex-col gap-1">
                     <div class="flex flex-col gap-1">
                         <span class="text-sm leading-none tracking-normal font-normal text-yellow">باقات إزالة الشيب الأكثر مبيعًا (تكفي لمدة 3 أشهر)</span>

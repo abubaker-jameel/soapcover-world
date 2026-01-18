@@ -13,10 +13,10 @@ export function BannerCardComponent({
       className
     )}" style="background-image: var(${image});">
       <div>
-        <span class="font-din-arabic-bold text-base text-white/80 leading-none tracking-normal">
+        <span class="md:font-din-arabic-bold md:font-bold font-normal text-base text-white/80 leading-none tracking-normal">
           ${subtitle}
         </span>
-        <h2 class="font-din-arabic-medium text-4xl font-medium text-white leading-[1.3889] tracking-normal">
+        <h2 class="font-din-arabic-medium md:text-4xl text-xl font-medium text-white leading-[1.3889] tracking-normal">
           ${title}
         </h2>
       </div>
